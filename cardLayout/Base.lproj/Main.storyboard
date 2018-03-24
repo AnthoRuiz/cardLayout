@@ -32,17 +32,17 @@
                                     <size key="itemSize" width="349" height="250"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="WdR-jD-dUg">
-                                        <rect key="frame" x="13" y="0.0" width="349" height="250"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="WdR-jD-dUg" customClass="CollectionViewCell" customModule="cardLayout" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="10" width="349" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="349" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5kk-TC-7ri">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hawaii" translatesAutoresizingMaskIntoConstraints="NO" id="5kk-TC-7ri">
                                                     <rect key="frame" x="0.0" y="0.0" width="349" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -62,9 +62,19 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <size key="customSize" width="349" height="250"/>
+                                        <connections>
+                                            <outlet property="locationDescription" destination="xd9-Iu-XjI" id="suo-47-Ibe"/>
+                                            <outlet property="locationImage" destination="5kk-TC-7ri" id="elB-Kg-Fha"/>
+                                            <outlet property="locationName" destination="y80-3B-6b4" id="oh0-mp-UQa"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="4JU-N5-DcC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BGc-eJ-8jo"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,4 +86,7 @@
             <point key="canvasLocation" x="52" y="78.710644677661179"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hawaii" width="292" height="173"/>
+    </resources>
 </document>
